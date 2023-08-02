@@ -1616,19 +1616,19 @@ const tokens = {
     "variable": "var(--sizes-fit)"
   },
   "sizes.breakpoint-sm": {
-    "value": "640px",
+    "value": "0",
     "variable": "var(--sizes-breakpoint-sm)"
   },
   "sizes.breakpoint-md": {
-    "value": "768px",
+    "value": "600px",
     "variable": "var(--sizes-breakpoint-md)"
   },
   "sizes.breakpoint-lg": {
-    "value": "1024px",
+    "value": "900px",
     "variable": "var(--sizes-breakpoint-lg)"
   },
   "sizes.breakpoint-xl": {
-    "value": "1280px",
+    "value": "1200px",
     "variable": "var(--sizes-breakpoint-xl)"
   },
   "sizes.breakpoint-2xl": {
@@ -1652,19 +1652,19 @@ const tokens = {
     "variable": "var(--animations-bounce)"
   },
   "breakpoints.sm": {
-    "value": "640px",
+    "value": "0",
     "variable": "var(--breakpoints-sm)"
   },
   "breakpoints.md": {
-    "value": "768px",
+    "value": "600px",
     "variable": "var(--breakpoints-md)"
   },
   "breakpoints.lg": {
-    "value": "1024px",
+    "value": "900px",
     "variable": "var(--breakpoints-lg)"
   },
   "breakpoints.xl": {
-    "value": "1280px",
+    "value": "1200px",
     "variable": "var(--breakpoints-xl)"
   },
   "breakpoints.2xl": {

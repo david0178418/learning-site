@@ -3,7 +3,7 @@ import { range } from '@/common/utils';
 import { css } from '@styled-system/css';
 import { Grid, GridItem } from '@styled-system/jsx';
 import { useAtom } from 'jotai';
-import { UserAnswerAtom } from './answer';
+import { UserAnswerAtom } from './problem';
 
 const BtnCls = css({
 	textAlign: 'center',
@@ -43,7 +43,7 @@ function Keypad() {
 				className={BtnCls}
 				colSpan={2}
 			>
-				Enter
+				Delete
 			</GridItem>
 		</Grid>
 	);

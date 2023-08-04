@@ -3,6 +3,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter } from 'next/font/google';
 import { css } from '@styled-system/css';
+import Providers from './providers';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,19 +18,21 @@ export default function RootLayout({ children }: {
 	return (
 		<html lang="en">
 			<body className={inter.className}>
-				<div className={css({ backgroundColor: 'darkgray' })}>
-					<Container>
-						<div className={css({
-							fontSize: 48,
-							fontWeight: 'bold',
-						})}>
+				<Providers>
+					<div className={css({ backgroundColor: 'darkgray' })}>
+						<Container>
+							<div className={css({
+								fontSize: 48,
+								fontWeight: 'bold',
+							})}>
 							Some Title
-						</div>
+							</div>
+						</Container>
+					</div>
+					<Container>
+						{children}
 					</Container>
-				</div>
-				<Container>
-					{children}
-				</Container>
+				</Providers>
 			</body>
 		</html>
 	);

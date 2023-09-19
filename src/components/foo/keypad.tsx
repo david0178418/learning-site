@@ -2,8 +2,8 @@
 import { range } from '@/common/utils';
 import { css } from '@styled-system/css';
 import { Grid, GridItem } from '@styled-system/jsx';
-import { useAtom } from 'jotai';
-import { UserAnswerAtom } from './problem';
+import { useSetAtom } from 'jotai';
+import { setAnswerCharacterAtom } from './problem';
 
 const BtnCls = css({
 	textAlign: 'center',
@@ -13,17 +13,13 @@ const BtnCls = css({
 	_hover: { backgroundColor: 'lightgrey' },
 });
 
-function usePushAnswerNum() {
-	const [userAnswerAtom, setUserAnswerAtom] = useAtom(UserAnswerAtom);
-
-	return (num: number) => {
-		setUserAnswerAtom(`${userAnswerAtom}${num}`);
-	};
-}
-
 export default
 function Keypad() {
-	const pushAnswerNum = usePushAnswerNum();
+	const setAnswerCharacter = useSetAtom(setAnswerCharacterAtom);
+
+	function handleNumber(digit: number) {
+		setAnswerCharacter(digit.toString());
+	}
 
 	return (
 		<Grid
@@ -34,7 +30,7 @@ function Keypad() {
 				<button
 					key={n}
 					className={BtnCls}
-					onClick={() => pushAnswerNum(n)}
+					onClick={() => handleNumber(n)}
 				>
 					{n}
 				</button>
